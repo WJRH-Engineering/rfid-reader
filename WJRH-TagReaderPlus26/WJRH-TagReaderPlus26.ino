@@ -7,9 +7,7 @@
 
 const char* ssid = "LC"; // wireless network to connect to. IP address was registered with ITS
 WiFiClient client;
-// For Connors server
-// IPAddress server(45,55,38,183);
-// int port = 100;
+
 // For Rasp Pi on LC
 IPAddress server(139, 147, 208, 174);
 int port = 80;
