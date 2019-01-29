@@ -12,3 +12,9 @@ Based on https://create.arduino.cc/projecthub/shakataganai/hid-prox-rfid-to-ardu
     See https://obviate.io/?p=7470 for more details & instructions
 
     https://gist.github.com/ShakataGaNai/4319d3e82a858c9d00c1d80f20da81a3#file-hid-prox-weigand-ino
+
+# Uploading code
+Utilize the Arduino IDE to upload code to the ESP8266.
+
+At the time of posting, the board setting in the tools drop down was set to Board: "NodeMCU 1.0 (ESP-12E Module)".
+The programmer was set to Programmer: "AVRISP mkII".
