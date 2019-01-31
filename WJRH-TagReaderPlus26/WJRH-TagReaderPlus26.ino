@@ -5,12 +5,13 @@
 
 ////////////////////////////////////////////////////////////////// CONSTANTS
 
-const char* ssid = "LC"; // wireless network to connect to. IP address was registered with ITS
-WiFiClient client;
+const char* ssid     = "WJRH";
+const char* password = "password";
+const char* hostnamex = "WJRH-<specify>Door";
 
-// For Rasp Pi on LC
-IPAddress server(139, 147, 208, 174);
-int port = 80;
+WiFiClient client;
+IPAddress server(none, of, ur, buisness);
+int port = hoy;
 
 unsigned char databits[MAX_BITS];    // stores all of the data bits
 unsigned char bitCount;              // number of bits currently captured
@@ -54,18 +55,36 @@ void setup() {
 
   weigand_counter = WEIGAND_WAIT_TIME;
 
-  Serial.println("Starting WiFi!");
-  WiFi.mode(WIFI_STA); // Prevent AP being generated
-  WiFi.begin(ssid);
+  WiFi.hostname(hostnamex);
 
-  Serial.print("Connecting to: ");
-  Serial.print(ssid);
+  Serial.println("Starting WiFi!");
+
+  // Set ESP8266 to be a station
+  Serial.printf("Wi-Fi mode set to WIFI_STA %s\n", WiFi.mode(WIFI_STA) ? "" : "Failed!");
+
+  delay(500); // needed to allow the mode to change
+  
+  // Connect
+  WiFi.begin(ssid, password);
+  Serial.print("Connecting ...\n");
+
   // Wait for connection
+  int i = 0;
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
-    Serial.print(".");
+    Serial.print('.');
+    if(i > 9){
+      Serial.printf("   %d\n", WiFi.status());
+      i = 0;
+    } else {
+      i++;
+    }
   }
-  Serial.println("");
+  for(; i < 10; i++){
+    Serial.print(' ');
+  }
+  Serial.printf("   %d\n", WiFi.status());
+
 
   delay(1000);
   Serial.print("IP Local Address: ");
@@ -170,4 +189,3 @@ int attemptReadID() {
       }
     }
   }
-
