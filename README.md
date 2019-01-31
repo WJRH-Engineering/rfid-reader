@@ -25,4 +25,14 @@ Utilize the Arduino IDE to upload code to the ESP8266.
 # ESPMacAddrTool
 This tool can be used to verify a connection to a network prior. This tool will provide the mac address of the ESP and the assigned IP address after connecting to the specified network. The tool will also periodically display the status code of the WiFi module when the WiFi connection has not yet succeeded.
 
+If there are issues with changing the hostname, comment out the hostname section of the code and run again. If this succeeds, uncomment the hostname change code and reupload.
+
+WiFi Module status codes descriptions:
+
+    0 : WL_IDLE_STATUS when Wi-Fi is in process of changing between statuses
+    1 : WL_NO_SSID_AVAILin case configured SSID cannot be reached
+    3 : WL_CONNECTED after successful connection is established
+    4 : WL_CONNECT_FAILED if password is incorrect
+    6 : WL_DISCONNECTED if module is not configured in station mode
+
 
