@@ -35,4 +35,6 @@ WiFi Module status codes descriptions:
     4 : WL_CONNECT_FAILED if password is incorrect
     6 : WL_DISCONNECTED if module is not configured in station mode
 
-
+# WJRH-TagReaderPlus26
+This code runs on an ESP8266 wired to an HID HID Prox Pro II RFID Reader.
+When uploading to a tag reader, replace the network password, hostname for this unit, ip address of the door system server and the port.
