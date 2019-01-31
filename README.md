@@ -14,7 +14,7 @@ Based on https://create.arduino.cc/projecthub/shakataganai/hid-prox-rfid-to-ardu
     https://gist.github.com/ShakataGaNai/4319d3e82a858c9d00c1d80f20da81a3#file-hid-prox-weigand-ino
 
 # Setting up your workspace
-The ESP8266 can be set up through the Arduino IDE. Download the latest Arduino IDE here. At the time of developement, Arduino 1.8.4 was used. After downloading the IDE, go to "File" -> "Preferences" and add http://arduino.esp8266.com/stable/package_esp8266com_index.json to the "Additional Boards Manager URLs" field. Then go to "Tools" -> "Board: XXX" pullout and select "Boards Manager...". Search for "esp8266" and install the latest version. Then in the "Board: XXX" pullout, select "NodeMCU 1.0 (ESP-12E Module)".
+The ESP8266 can be set up through the Arduino IDE. Download the latest Arduino IDE at https://www.arduino.cc/. At the time of developement, Arduino 1.8.4 was used. After downloading the IDE, go to "File" -> "Preferences" and add http://arduino.esp8266.com/stable/package_esp8266com_index.json to the "Additional Boards Manager URLs" field. Then go to "Tools" -> "Board: XXX" pullout and select "Boards Manager...". Search for "esp8266" and install the latest version. Then in the "Board: XXX" pullout, select "NodeMCU 1.0 (ESP-12E Module)".
 
 At the time of posting, the board setting in the tools drop down was set to Board: "NodeMCU 1.0 (ESP-12E Module)".
 The programmer was set to Programmer: "AVRISP mkII".
